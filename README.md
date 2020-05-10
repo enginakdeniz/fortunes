@@ -22,16 +22,12 @@ $ brew install fortune
 Then install the repo.
 ```bash
 # Debian/Ubuntu
-$ git clone git@github.com:ruanyf/fortunes.git
+$ git clone git@github.com:enginakdeniz/fortunes.git
 $ sudo mv fortunes/data/* /usr/share/games/fortunes/
 
 # Mac
-$ git clone git@github.com:ruanyf/fortunes.git
-$ strfile fortunes/data/fortunes
-$ strfile fortunes/data/chinese
-$ strfile fortunes/data/tang300
-$ strfile fortunes/data/song100
-$ strfile fortunes/data/diet
+$ git clone git@github.com:enginakdeniz/fortunes.git
+$ strfile fortunes/data/aforizma
 $ mv fortunes/data/* /usr/local/share/games/fortunes/
 ```
 ### Usage
@@ -52,8 +48,8 @@ $ fortune -c
 ```
 (fortunes)
 %
-"Don't waste life in doubts and fears."
-  ~Ralph Waldo Emerson
+"Microsoft'ta sayısız parlak fikir var, ancak bunların hepsinin yukarıdan geldiği düşünülüyor - korkarım bu pek doğru değil."
+  ~Bill Gates
 ```
 Example of `-f`
 ```bash
@@ -61,21 +57,18 @@ $ fortune -f
 ```
 
 ```
-100.00% /usr/share/games/fortunes
-    17.21% fortunes
-    81.51% chinese
-     0.98% tang300
-     0.30% song100
+100,00% /usr/share/games/fortunes
+    100,00% aforizma
 ```
 Example of `-e`
 ```bash
-$ fortune -e chinese fortunes
+$ fortune -e aforizma art-of-war
 #  is equivalent to
-$ fortune 50% chinese 50% fortunes
+$ fortune 50% aforizma 50% art-of-war
 
-$ fortune -e chinese fortunes tang300 song100
+$ fortune -e aforizma art-of-war hayyam-rubai
 #  is equivalent to
-$ fortune 25% chinese 25% fortunes 25% tang300  25% song100
+$ fortune 33% aforizma 33% art-of-war 33% hayyam-rubai
 ```
 ### How to automatically launch fortune when opening a shell window
 
