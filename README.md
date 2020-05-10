@@ -3,16 +3,16 @@
 Fortune is a simple Unix program that displays a random message from a database of quotations.
 ```
 $ fortune
-
-"What we see is mainly what we look for."
-  ~Unknown
 ```
+>"Teknik olmayan soruların bazen hiç bir cevabı yoktur."
+>  ~Linus Torvalds
+
 This repo contains some fortune database files, especially useful for Turkish user.
 
 ### Install
 
 First install fortune package. If your computer has already installed it, skip this step.
-```
+```bash
 # Debian/Ubuntu
 $ sudo apt-get install fortune
 
@@ -20,7 +20,7 @@ $ sudo apt-get install fortune
 $ brew install fortune
 ```
 Then install the repo.
-```
+```bash
 # Debian/Ubuntu
 $ git clone git@github.com:ruanyf/fortunes.git
 $ sudo mv fortunes/data/* /usr/share/games/fortunes/
@@ -35,7 +35,7 @@ $ strfile fortunes/data/diet
 $ mv fortunes/data/* /usr/local/share/games/fortunes/
 ```
 ### Usage
-```
+```bash
 $ fortune [OPTIONS] [/path/to/fortunes]
 ```
 Options
@@ -45,18 +45,22 @@ Options
 - -e     Consider all fortune files to be of equal size.
 ```
 Example of `-c`
-```
+```bash
 $ fortune -c
+```
 
+```
 (fortunes)
 %
 "Don't waste life in doubts and fears."
   ~Ralph Waldo Emerson
 ```
 Example of `-f`
-```
+```bash
 $ fortune -f
+```
 
+```
 100.00% /usr/share/games/fortunes
     17.21% fortunes
     81.51% chinese
@@ -64,7 +68,7 @@ $ fortune -f
      0.30% song100
 ```
 Example of `-e`
-```
+```bash
 $ fortune -e chinese fortunes
 #  is equivalent to
 $ fortune 50% chinese 50% fortunes
@@ -76,7 +80,7 @@ $ fortune 25% chinese 25% fortunes 25% tang300  25% song100
 ### How to automatically launch fortune when opening a shell window
 
 Depending on which shell you use, at the end of your ~/.bashrc or ~/.zshrc file, copy the following lines into it.
-```
+```bash
 echo
 echo "=============== Quote Of The Day ==============="
 echo
@@ -91,20 +95,20 @@ echo
 
 (2) Append a percent sign (%) after each item. The percent sign should take a new line. The following is an example.
 ```
-A day for firm decisions!!!!!  Or is it?
+Herhangi bir program sadece yararı kadar iyidir. ~Linus Torvalds
 %
-A few hours grace before the madness begins again.
+Yazılım seks gibidir: ücretsiz olunca daha iyi olur. ~Linus Torvalds
 %
-A gift of a flower will soon be made to you.
+Sizleri neden diye sorarken duyabiliyorum. Hurd bir yıl içerisinde (ya da iki, ya da öteki ay, kim bilir) yok olup gidecek ve ben çok Minix'e sahibim. ~Linus Torvalds
 %
-A long-forgotten loved one will appear soon.
-
-Buy the negatives at any price.
+En mutsuz müşterileriniz, öğrenmeniz için en büyük kaynağınızdır.
+  ~Bill Gates
 %
-A tall, dark stranger will have more fun than you.
+General Motors, tekonlojisini bilgisayarlar gibi geliştirseydi, 1.000 MPG kapasitesinde 25 dolarlık arabalar sürüyor olurduk.
+  ~Bill Gates
 ```
 (3) Generate the index file.
-```
+```bash
 strfile -c % your-fortune-file your-fortune-file.dat
 ```
-(4) Move the fortune file and its index file into /usr/share/games/fortunes/.
+(4) Move the fortune file and its index file into */usr/share/games/fortunes/*.
