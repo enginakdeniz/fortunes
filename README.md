@@ -23,12 +23,12 @@ Then install the repo.
 ```bash
 # Debian/Ubuntu
 $ git clone https://github.com/enginakdeniz/fortunes.git
-$ sudo mv fortunes/* /usr/share/games/fortunes/
+$ sudo mv fortunes/data/* /usr/share/games/fortunes/
 
 # Mac
 $ git clone https://github.com/enginakdeniz/fortunes.git
 $ strfile fortunes/data/aforizma
-$ mv fortunes/* /usr/local/share/games/fortunes/
+$ mv fortunes/data/* /usr/local/share/games/fortunes/
 ```
 ### Usage
 ```bash
